@@ -20,7 +20,7 @@ new Chart('cPib', {
     labels: ['2019','2020','2021','2022','2023','2024','2025 ✦'],
     datasets: [{
       label: 'Crecimiento PIB (%)',
-      data: [3.2, -7.0, 10.8, 7.5, 0.6, 1.7, 2.8],
+      data: [3.2, -7.0, 10.8, 7.5, 0.6, 1.7, 2.6],
       backgroundColor: ctx => {
         if (ctx.dataIndex === 6) return 'rgba(252,209,22,.5)';
         return ctx.dataset.data[ctx.dataIndex] < 0
@@ -57,7 +57,7 @@ new Chart('cInf', {
     datasets: [
       {
         label: 'Inflación IPC (%)',
-        data: [3.8, 1.61, 5.62, 13.12, 9.28, 5.20, 4.5],
+        data: [3.8, 1.61, 5.62, 13.12, 9.28, 5.20, 5.10],
         borderColor: '#ff6b35', backgroundColor: 'rgba(255,107,53,.1)',
         borderWidth: 3,
         pointBackgroundColor: ctx => ctx.dataIndex === 6 ? '#FCD116' : '#ff6b35',
