@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informe Macroeconómico · Colombia 2024–2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- ══════════════ NAV ══════════════ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">
+      <div class="flag"><div class="fy"></div><div class="fb"></div><div class="fr"></div></div>
+      <span>Colombia Macro 2024–2025</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#pib">PIB</a></li>
+      <li><a href="#inflacion">Inflación</a></li>
+      <li><a href="#deflacion">Deflación</a></li>
+      <li><a href="#desempleo">Desempleo</a></li>
+      <li><a href="#tasas">Tasas de Interés</a></li>
+      <li><a href="#resumen">Resumen</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<!-- ══════════════ HERO ══════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div id="pts"></div>
+  <div class="hero-inner">
+    <div class="badge">
+      <span class="dot-live"></span>
+      Datos oficiales · DANE &amp; Banco de la República · 2025
+    </div>
+    <h1>Informe <span class="gtext">Macroeconómico</span><br>de Colombia</h1>
+    <p class="hero-sub">Entendiendo la economía colombiana de forma clara y accesible, con datos de fuentes oficiales.</p>
+    <div class="hstats">
+      <div class="hstat">
+        <span class="hstat-val c-sky" data-cnt="2.8" data-sfx="%">0%</span>
+        <div class="hstat-lbl">PIB 2025 (proyección)</div>
+      </div>
+      <div class="hstat">
+        <span class="hstat-val c-ora" data-cnt="4.5" data-sfx="%">0%</span>
+        <div class="hstat-lbl">Inflación Mar 2025</div>
+      </div>
+      <div class="hstat">
+        <span class="hstat-val c-tea" data-cnt="11.2" data-sfx="%">0%</span>
+        <div class="hstat-lbl">Desempleo Q1 2025</div>
+      </div>
+      <div class="hstat">
+        <span class="hstat-val c-yel" data-cnt="8.75" data-sfx="%">0%</span>
+        <div class="hstat-lbl">Tasa Banrep Abr 2025</div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint"><span>Explorar</span><div class="arrow-down"></div></div>
+</section>
+
+<!-- ══════════════ INTRO ══════════════ -->
+<section id="intro">
+  <div class="wrap">
+    <div class="two rv">
+      <div>
+        <div class="sec-tag bg-yel c-yel">¿Por qué importa?</div>
+        <h2 class="sec-title">La <span class="c-yel">macroeconomía</span><br>en tu vida diaria</h2>
+        <p style="color:var(--tx2);margin-bottom:.9rem;font-size:.93rem;line-height:1.75">
+          La macroeconomía estudia el comportamiento global de una economía: producción, empleo, precios
+          y tasas de interés. Estos indicadores no son solo números abstractos; determinan cuánto
+          cuesta el mercado, qué tan fácil es conseguir empleo y qué tan caro es pedir un crédito.
+        </p>
+        <div class="analogy">
+          <div class="atag">💡 En palabras simples</div>
+          <p>Si la economía colombiana fuera un carro: el <strong style="color:var(--sky)">PIB</strong>
+          es la velocidad, la <strong style="color:var(--orange)">inflación</strong> es el precio de la gasolina,
+          la <strong style="color:var(--purple)">deflación</strong> sería el freno de mano, el
+          <strong style="color:var(--teal)">desempleo</strong> son los asientos vacíos, y la
+          <strong style="color:var(--yellow)">tasa de interés</strong> es el costo del seguro del vehículo.</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="card bg-sky" style="text-align:center">
+          <div style="font-size:1.9rem;margin-bottom:.45rem">📈</div>
+          <strong class="c-sky">PIB</strong>
+          <p style="font-size:.78rem;color:var(--tx2);margin-top:.3rem">Tamaño y crecimiento de la economía</p>
+        </div>
+        <div class="card bg-ora" style="text-align:center">
+          <div style="font-size:1.9rem;margin-bottom:.45rem">🔥</div>
+          <strong class="c-ora">Inflación</strong>
+          <p style="font-size:.78rem;color:var(--tx2);margin-top:.3rem">Aumento generalizado de precios</p>
+        </div>
+        <div class="card bg-pur" style="text-align:center">
+          <div style="font-size:1.9rem;margin-bottom:.45rem">❄️</div>
+          <strong class="c-pur">Deflación</strong>
+          <p style="font-size:.78rem;color:var(--tx2);margin-top:.3rem">Caída sostenida de precios</p>
+        </div>
+        <div class="card bg-tea" style="text-align:center">
+          <div style="font-size:1.9rem;margin-bottom:.45rem">👷</div>
+          <strong class="c-tea">Desempleo</strong>
+          <p style="font-size:.78rem;color:var(--tx2);margin-top:.3rem">Porcentaje sin trabajo activo</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ PIB ══════════════ -->
+<section id="pib" class="s-pib">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-sky c-sky">Indicador Principal</div>
+      <h2 class="sec-title">Producto Interno Bruto <span class="c-sky">(PIB)</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#003893,#4f9eff)"></div>
+      <p class="sec-sub">El termómetro principal del tamaño y salud de la economía colombiana</p>
+    </div>
+    <div class="two">
+      <div class="rv-l">
+        <div class="card">
+          <div class="def bg-sky">
+            <h3 class="c-sky">📚 ¿Qué es el PIB?</h3>
+            <p>El Producto Interno Bruto es el valor total de todos los bienes y servicios finales producidos en Colombia durante un año. Es la medida más importante del tamaño de una economía.</p>
+          </div>
+          <div class="analogy">
+            <div class="atag">🏠 Analogía cotidiana</div>
+            <p>Imagina que Colombia es una familia. El PIB es el ingreso total de todos sus miembros. Si el PIB crece, la familia tiene más dinero para gastar, ahorrar e invertir. Si cae (como en 2020 por COVID), es como perder el trabajo.</p>
+          </div>
+          <p style="font-size:.78rem;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.65rem">Cifras clave</p>
+          <div class="mrow"><span class="mlbl">PIB nominal estimado (USD)</span><span class="mval c-sky">≈ $343 mil millones</span></div>
+          <div class="mrow"><span class="mlbl">Proyección crecimiento 2025 ✦</span><span class="mval">2.8% <span class="tbadge t-up">↑ acelerando</span></span></div>
+          <div class="mrow"><span class="mlbl">Crecimiento confirmado 2024</span><span class="mval">1.7% <span class="tbadge t-up">↑ mejora</span></span></div>
+          <div class="mrow"><span class="mlbl">Crecimiento 2023</span><span class="mval">0.6%</span></div>
+          <div class="mrow"><span class="mlbl">Caída COVID 2020</span><span class="mval c-red">−7.0%</span></div>
+          <div class="mrow"><span class="mlbl">Rebote 2021</span><span class="mval">+10.8% <span class="tbadge t-up">récord</span></span></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.9rem">¿Cómo afecta el PIB tu vida?</p>
+          <div class="igrid">
+            <div class="icard"><div class="ico">💼</div><div class="it">Más empleo</div><div class="id">Mayor producción genera nuevos puestos de trabajo</div></div>
+            <div class="icard"><div class="ico">🏥</div><div class="it">Mejor inversión pública</div><div class="id">El Estado puede destinar más a salud y educación</div></div>
+            <div class="icard"><div class="ico">💰</div><div class="it">Mejores salarios</div><div class="id">Las empresas pueden pagar más cuando crecen</div></div>
+            <div class="icard"><div class="ico">🚧</div><div class="it">Infraestructura</div><div class="id">Más recursos para carreteras y servicios públicos</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="card">
+          <p style="font-weight:600;margin-bottom:.2rem">Crecimiento del PIB — Colombia</p>
+          <p style="font-size:.73rem;color:var(--tx2);margin-bottom:1rem">Variación % anual · Fuente: DANE</p>
+          <div class="ch-wrap"><canvas id="cPib"></canvas></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:1rem">Sectores principales del PIB</p>
+          <div class="prog-wrap"><div class="prog-head"><span>Servicios financieros</span><span class="c-sky">37%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#4f9eff" data-w="37"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Industria</span><span class="c-sky">24%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#003893" data-w="24"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Comercio y turismo</span><span class="c-sky">18%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#0066cc" data-w="18"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Minería e hidrocarburos</span><span class="c-sky">7%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#5599ff" data-w="7"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Agricultura</span><span class="c-sky">7%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#7eb8ff" data-w="7"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Construcción</span><span class="c-sky">7%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#a8d4ff" data-w="7"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ INFLACIÓN ══════════════ -->
+<section id="inflacion" class="s-inf">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-ora c-ora">Precios &amp; Poder Adquisitivo</div>
+      <h2 class="sec-title">Inflación <span class="c-ora">en Colombia</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#CE1126,#ff6b35)"></div>
+      <p class="sec-sub">El alza sostenida de precios y su impacto directo en tu bolsillo</p>
+    </div>
+    <div class="two">
+      <div class="rv-l">
+        <div class="card">
+          <div class="def bg-ora">
+            <h3 class="c-ora">🔥 ¿Qué es la inflación?</h3>
+            <p>Es el aumento generalizado y sostenido del nivel de precios de bienes y servicios en una economía. Cuando hay inflación, con la misma cantidad de dinero puedes comprar menos que antes: tu poder adquisitivo disminuye.</p>
+          </div>
+          <div class="analogy" style="background:rgba(206,17,38,.05);border-color:rgba(206,17,38,.2)">
+            <div class="atag" style="color:var(--orange)">☕ Ejemplo práctico</div>
+            <p>Si un café costaba $1.000 en 2022 y hoy cuesta $1.130, ese producto tuvo una inflación del 13%. Si tu sueldo no subió igual, hoy puedes comprar menos cafés con el mismo salario.</p>
+          </div>
+          <p style="font-size:.78rem;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.65rem">Evolución reciente</p>
+          <div class="mrow"><span class="mlbl">Inflación a marzo 2025 ✦</span><span class="mval c-ora">4.5% <span class="tbadge t-up">↓ bajando</span></span></div>
+          <div class="mrow"><span class="mlbl">Proyección fin de 2025 ✦</span><span class="mval" style="color:#ffcc00">~3.8%</span></div>
+          <div class="mrow"><span class="mlbl">Pico máximo — Dic 2022</span><span class="mval" style="color:#ff4d4d">13.12% 🔴</span></div>
+          <div class="mrow"><span class="mlbl">Inflación cierre 2023</span><span class="mval">9.28% <span class="tbadge t-up">↓</span></span></div>
+          <div class="mrow"><span class="mlbl">Inflación cierre 2024</span><span class="mval">5.20%</span></div>
+          <div class="mrow"><span class="mlbl">Meta del Banrep</span><span class="mval c-yel">3.0%</span></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.8rem">¿Por qué subió tanto?</p>
+          <div style="display:flex;flex-wrap:wrap">
+            <span class="pill">⚡ Precios energéticos globales</span>
+            <span class="pill">🌧️ Fenómeno La Niña</span>
+            <span class="pill">📦 Cadenas de suministro</span>
+            <span class="pill">💸 Devaluación del peso</span>
+            <span class="pill">🌍 Inflación mundial post-COVID</span>
+            <span class="pill">🚢 Costos de transporte</span>
+          </div>
+          <div style="margin-top:1rem;padding:.9rem;background:var(--glass);border-radius:10px;border:1px solid var(--border)">
+            <p style="font-size:.8rem;color:var(--tx2)"><strong style="color:var(--tx1)">¿Qué es el IPC?</strong> El DANE mide la inflación con el Índice de Precios al Consumidor, que sigue el precio de ~443 productos y servicios que consumen los hogares colombianos.</p>
+          </div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="card">
+          <p style="font-weight:600;margin-bottom:.2rem">Inflación anual — Colombia (IPC)</p>
+          <p style="font-size:.73rem;color:var(--tx2);margin-bottom:1rem">Variación % fin de año · Fuente: DANE</p>
+          <div class="ch-wrap"><canvas id="cInf"></canvas></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.8rem">Inflación por categoría (2025 Q1 ✦ est.)</p>
+          <div class="ch-wrap sm"><canvas id="cCat"></canvas></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DEFLACIÓN ══════════════ -->
+<section id="deflacion" class="s-defl">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-pur c-pur">El otro extremo</div>
+      <h2 class="sec-title">Deflación: <span class="c-pur">¿Cuándo bajar precios es malo?</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#7b2d8b,#8b5cf6)"></div>
+      <p class="sec-sub">Por qué la caída de precios puede ser una señal de alarma económica</p>
+    </div>
+    <div class="two">
+      <div class="rv-l">
+        <div class="card">
+          <div class="def bg-pur">
+            <h3 class="c-pur">❄️ ¿Qué es la deflación?</h3>
+            <p>Es el fenómeno opuesto a la inflación: ocurre cuando los precios bajan de manera generalizada y sostenida. Aunque parece una buena noticia, puede ser muy peligrosa porque indica que la economía se está contrayendo.</p>
+          </div>
+          <div class="analogy" style="background:rgba(139,92,246,.05);border-color:rgba(139,92,246,.2)">
+            <div class="atag" style="color:#8b5cf6">🛒 El círculo vicioso</div>
+            <p>Si los precios bajan hoy, la gente espera que bajen más mañana y deja de comprar. Las empresas venden menos, recortan empleados, los salarios caen, la gente gasta menos... y los precios caen aún más. A esto se le llama <strong style="color:var(--tx1)">espiral deflacionaria</strong>.</p>
+          </div>
+          <p style="font-size:.78rem;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.7rem">Inflación vs Deflación</p>
+          <div class="table-scroll">
+            <table class="ctable">
+              <thead>
+                <tr><th>Aspecto</th><th>Inflación</th><th>Deflación</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Precios</td><td class="c-ora">↑ Suben</td><td class="c-pur">↓ Bajan</td></tr>
+                <tr><td>Consumo</td><td>Se mantiene</td><td class="c-red">Se contrae</td></tr>
+                <tr><td>Deudas reales</td><td class="c-tea">Se alivian</td><td class="c-red">Más pesadas</td></tr>
+                <tr><td>Salarios</td><td>Tienden a subir</td><td class="c-red">Presión a la baja</td></tr>
+                <tr><td>Inversión</td><td>Moderada</td><td class="c-red">Se paraliza</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="card">
+          <p style="font-weight:600;margin-bottom:.8rem">Colombia y la deflación</p>
+          <p style="color:var(--tx2);font-size:.86rem;margin-bottom:.9rem;line-height:1.7">Colombia históricamente no ha sufrido deflación sostenida. El reto del país ha sido la inflación alta, no precios que caen.</p>
+          <div class="def bg-tea">
+            <h3 class="c-tea">✅ Situación actual</h3>
+            <p>La deflación <strong>NO</strong> aplica a Colombia hoy. Estamos en <em>desinflación</em> (inflación bajando gradualmente), no en deflación. El país avanza hacia la normalización del 3%.</p>
+          </div>
+          <div class="def bg-pur">
+            <h3 class="c-pur">⚠️ Casos históricos mundiales</h3>
+            <p>Japón vivió deflación durante la "década perdida" (1990s). Grecia la experimentó en su crisis (2013–2016). La Gran Depresión de 1929 fue profundamente deflacionaria.</p>
+          </div>
+          <div class="def bg-yel">
+            <h3 class="c-yel">💡 Deflación "buena" vs "mala"</h3>
+            <p>No toda baja de precios es dañina. Si los precios bajan por innovación o mayor eficiencia (ej: celulares, electrónicos), eso es positivo. El problema ocurre cuando bajan por colapso de la demanda.</p>
+          </div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.8rem">Señales de alerta deflacionaria</p>
+          <div class="igrid">
+            <div class="icard bg-pur" style="border:none"><div class="ico">📉</div><div class="it">Inflación bajo 1%</div><div class="id">Zona de alerta, deflación posible</div></div>
+            <div class="icard bg-pur" style="border:none"><div class="ico">🏭</div><div class="it">Producción cayendo</div><div class="id">Empresas producen menos por falta de demanda</div></div>
+            <div class="icard bg-pur" style="border:none"><div class="ico">🏦</div><div class="it">Crédito paralizado</div><div class="id">Los bancos dejan de prestar</div></div>
+            <div class="icard bg-pur" style="border:none"><div class="ico">😟</div><div class="it">Desconfianza masiva</div><div class="id">Todos aplazan sus decisiones de gasto</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ DESEMPLEO ══════════════ -->
+<section id="desempleo" class="s-desemp">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-tea c-tea">Mercado Laboral</div>
+      <h2 class="sec-title">Desempleo <span class="c-tea">en Colombia</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#007a6a,#00d4aa)"></div>
+      <p class="sec-sub">El mercado laboral colombiano y los desafíos del empleo formal</p>
+    </div>
+    <div class="two">
+      <div class="rv-l">
+        <div class="card">
+          <div class="def bg-tea">
+            <h3 class="c-tea">👷 ¿Qué es el desempleo?</h3>
+            <p>Mide el porcentaje de personas que forman parte de la fuerza laboral (quieren y pueden trabajar) pero no tienen empleo y lo buscan activamente. Se mide con la Gran Encuesta Integrada de Hogares (GEIH) del DANE.</p>
+          </div>
+          <div class="analogy" style="background:rgba(0,212,170,.05);border-color:rgba(0,212,170,.2)">
+            <div class="atag" style="color:var(--teal)">🔢 Tipos de desempleo</div>
+            <p>
+              <strong style="color:var(--tx1)">Friccional:</strong> Temporal mientras se busca mejor trabajo.<br>
+              <strong style="color:var(--tx1)">Estructural:</strong> Por cambios económicos como la automatización.<br>
+              <strong style="color:var(--tx1)">Cíclico:</strong> Causado por recesiones económicas.<br>
+              <strong style="color:var(--tx1)">Estacional:</strong> Varía según la época del año.
+            </p>
+          </div>
+          <p style="font-size:.78rem;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.65rem">Datos 2024–2025</p>
+          <div class="mrow"><span class="mlbl">Desempleo Q1 2025 ✦</span><span class="mval c-tea">11.2% <span class="tbadge t-warn">est.</span></span></div>
+          <div class="mrow"><span class="mlbl">Tasa nacional promedio 2024</span><span class="mval">10.6%</span></div>
+          <div class="mrow"><span class="mlbl">Pico por COVID 2020</span><span class="mval" style="color:#ff4d4d">15.9%</span></div>
+          <div class="mrow"><span class="mlbl">Desempleo femenino 2025 ✦</span><span class="mval">≈ 14.5% <span class="tbadge t-warn">brecha</span></span></div>
+          <div class="mrow"><span class="mlbl">Desempleo masculino 2025 ✦</span><span class="mval">≈ 8.5%</span></div>
+          <div class="mrow"><span class="mlbl">Desempleo juvenil (18–28)</span><span class="mval" style="color:#ffaa00">≈ 23.5% <span class="tbadge t-warn">alto</span></span></div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="card">
+          <p style="font-weight:600;margin-bottom:.2rem">Tasa de desempleo — Colombia</p>
+          <p style="font-size:.73rem;color:var(--tx2);margin-bottom:1rem">Promedio anual % · Fuente: DANE – GEIH</p>
+          <div class="ch-wrap"><canvas id="cDesemp"></canvas></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:1rem">Ciudades — tasa de desempleo 2024</p>
+          <div class="prog-wrap"><div class="prog-head"><span>Quibdó</span><span style="color:#ff4d4d">22.7%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#ff4d4d" data-w="76"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Armenia</span><span style="color:#ff7700">17.5%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#ff7700" data-w="58"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Pereira</span><span style="color:#ffaa00">15.8%</span></div><div class="prog-bar"><div class="prog-fill" style="background:#ffaa00" data-w="52"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Bogotá</span><span class="c-tea">10.1%</span></div><div class="prog-bar"><div class="prog-fill" style="background:var(--teal)" data-w="33"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Medellín</span><span class="c-tea">9.8%</span></div><div class="prog-bar"><div class="prog-fill" style="background:var(--teal)" data-w="32"></div></div></div>
+          <div class="prog-wrap"><div class="prog-head"><span>Barranquilla</span><span class="c-sky">8.3%</span></div><div class="prog-bar"><div class="prog-fill" style="background:var(--sky)" data-w="27"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ TASAS ══════════════ -->
+<section id="tasas" class="s-tasa">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-yel c-yel">Política Monetaria</div>
+      <h2 class="sec-title">Tasas de <span class="c-yel">Interés</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#b8860b,#FCD116)"></div>
+      <p class="sec-sub">La principal herramienta del Banco de la República para controlar la economía</p>
+    </div>
+    <div class="two">
+      <div class="rv-l">
+        <div class="card">
+          <div class="def bg-yel">
+            <h3 class="c-yel">🏦 ¿Qué son las tasas de interés?</h3>
+            <p>Es el "precio del dinero". Cuando pides un préstamo, la tasa de interés es el costo por usar ese dinero. El Banco de la República fija la Tasa de Política Monetaria (TPM), que influye en todas las tasas del sistema financiero colombiano.</p>
+          </div>
+          <div class="analogy">
+            <div class="atag">🚰 La analogía del grifo</div>
+            <p><strong style="color:var(--tx1)">Sube la tasa →</strong> cierra el grifo → crédito caro → menos gasto → precios bajan.<br>
+            <strong style="color:var(--tx1)">Baja la tasa →</strong> abre el grifo → crédito barato → más consumo → economía se reactiva.</p>
+          </div>
+          <p style="font-size:.78rem;color:var(--tx2);text-transform:uppercase;letter-spacing:1px;margin-bottom:.65rem">Tasa de política monetaria</p>
+          <div class="mrow"><span class="mlbl">Tasa actual — Abril 2025 ✦</span><span class="mval c-yel">8.75% <span class="tbadge t-up">↓ bajando</span></span></div>
+          <div class="mrow"><span class="mlbl">Cierre 2024</span><span class="mval">9.25%</span></div>
+          <div class="mrow"><span class="mlbl">Pico máximo (Sep 2023)</span><span class="mval" style="color:#ff4d4d">13.25% 🔴</span></div>
+          <div class="mrow"><span class="mlbl">Mínimo histórico (2020–2021)</span><span class="mval">1.75%</span></div>
+          <div class="mrow"><span class="mlbl">Proyección fin de 2025 ✦</span><span class="mval" style="color:#ffcc00">~7.5%</span></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.85rem">Ciclo de recortes del Banrep</p>
+          <div class="tl">
+            <div class="tl-item"><div class="tl-dot" style="background:#ff4d4d;border-color:#ff4d4d"></div><div class="tl-date">Sep 2023 — Pico</div><div class="tl-text">Tasa en 13.25% para combatir la inflación del 13.12%</div></div>
+            <div class="tl-item"><div class="tl-dot" style="background:#ffaa00;border-color:#ffaa00"></div><div class="tl-date">Dic 2023 — Primer recorte</div><div class="tl-text">Baja a 13.00% — inflación empezando a ceder</div></div>
+            <div class="tl-item"><div class="tl-dot" style="background:#ffcc00;border-color:#ffcc00"></div><div class="tl-date">Ene–Jun 2024</div><div class="tl-text">Recortes graduales — tasa baja de 13% a 11.25%</div></div>
+            <div class="tl-item"><div class="tl-dot" style="background:var(--teal);border-color:var(--teal)"></div><div class="tl-date">Jul–Dic 2024</div><div class="tl-text">Continúan recortes — tasa llega a 9.25%</div></div>
+            <div class="tl-item"><div class="tl-dot" style="background:#4f9eff;border-color:#4f9eff"></div><div class="tl-date">Ene–Mar 2025 ✦</div><div class="tl-text">Banrep recorta a 9.0% y luego a 8.75% — inflación cediendo</div></div>
+            <div class="tl-item"><div class="tl-dot" style="background:var(--yellow);border-color:var(--yellow)"></div><div class="tl-date">Proyección 2025 ✦</div><div class="tl-text">Se esperan más recortes hacia ~7.5% si la inflación alcanza la meta del 3%</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="rv-r">
+        <div class="card">
+          <p style="font-weight:600;margin-bottom:.2rem">Tasa de Política Monetaria — Banrep</p>
+          <p style="font-size:.73rem;color:var(--tx2);margin-bottom:1rem">Evolución % · Fuente: Banco de la República</p>
+          <div class="ch-wrap"><canvas id="cTasa"></canvas></div>
+        </div>
+        <div class="card">
+          <p style="font-size:.82rem;font-weight:600;margin-bottom:.8rem">¿Cómo te afecta directamente?</p>
+          <div class="igrid">
+            <div class="icard bg-yel" style="border:none"><div class="ico">🏠</div><div class="it">Crédito hipotecario</div><div class="id">Tasa alta = cuotas más costosas para vivienda</div></div>
+            <div class="icard bg-yel" style="border:none"><div class="ico">💳</div><div class="it">Tarjeta de crédito</div><div class="id">Las tasas de TDC siguen al Banrep</div></div>
+            <div class="icard bg-yel" style="border:none"><div class="ico">🏪</div><div class="it">Empresas</div><div class="id">Crédito caro = menos inversión y empleo</div></div>
+            <div class="icard bg-yel" style="border:none"><div class="ico">💵</div><div class="it">CDT y ahorros</div><div class="id">Tasa alta = mejores rendimientos en CDT</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ RESUMEN ══════════════ -->
+<section id="resumen" class="s-resumen">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="sec-tag bg-yel c-yel">Panorama General</div>
+      <h2 class="sec-title">Resumen de <span class="gtext">indicadores</span></h2>
+      <div class="divider" style="background:linear-gradient(90deg,#FCD116,#CE1126,#003893)"></div>
+      <p class="sec-sub">Radiografía completa de la situación macroeconómica de Colombia</p>
+    </div>
+    <div class="sum-grid rv">
+      <div class="scard" style="border-color:rgba(79,158,255,.3)"><div class="sn">PIB 2025 ✦ proy.</div><span class="sv c-sky">2.8%</span><div class="st">↑ Desde 1.7% confirmado en 2024</div></div>
+      <div class="scard" style="border-color:rgba(255,107,53,.3)"><div class="sn">Inflación Mar 2025 ✦</div><span class="sv c-ora">4.5%</span><div class="st">↓ Desde 5.2% en 2024 · meta: 3%</div></div>
+      <div class="scard" style="border-color:rgba(139,92,246,.3)"><div class="sn">Deflación</div><span class="sv c-pur">N/A</span><div class="st">Colombia tiene inflación, no deflación</div></div>
+      <div class="scard" style="border-color:rgba(0,212,170,.3)"><div class="sn">Desempleo Q1 2025 ✦</div><span class="sv c-tea">11.2%</span><div class="st">Est. estacional · 10.6% promedio 2024</div></div>
+      <div class="scard" style="border-color:rgba(252,209,22,.3)"><div class="sn">Tasa Banrep Abr 2025 ✦</div><span class="sv c-yel">8.75%</span><div class="st">↓ Desde pico 13.25% en sep 2023</div></div>
+    </div>
+    <div class="card rv">
+      <p style="font-weight:600;margin-bottom:1.1rem">Conclusiones del informe</p>
+      <div class="conc">
+        <div>
+          <h5 style="color:var(--teal)">✅ Señales positivas</h5>
+          <ul>
+            <li>Inflación bajó de 13.12% (2022) a 4.5% (2025)</li>
+            <li>PIB acelera: 0.6% → 1.7% → 2.8% (proy.)</li>
+            <li>Banrep recortó de 13.25% a 8.75% en 18 meses</li>
+            <li>Crédito e inversión más accesibles</li>
+            <li>Recuperación sostenida del empleo post-COVID</li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="color:#ffaa00">⚠️ Retos pendientes</h5>
+          <ul>
+            <li>Inflación aún 1.5 pp por encima de la meta 3%</li>
+            <li>Desempleo juvenil (~23.5%) sigue muy alto</li>
+            <li>Brecha de género en empleo: 6 pp de diferencia</li>
+            <li>Alta informalidad laboral (~58% del empleo)</li>
+            <li>Riesgos fiscales y de endeudamiento público</li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="color:var(--sky)">🔮 Proyecciones 2025 ✦</h5>
+          <ul>
+            <li>Inflación proyectada a ~3.8% al cierre del año</li>
+            <li>Tasa Banrep hacia ~7.5% si inflación cede</li>
+            <li>PIB +2.8%: impulsado por consumo e inversión</li>
+            <li>Desempleo anual: ~10.5–11% (meta &lt;10%)</li>
+            <li>Consolidación de la desinflación como logro clave</li>
+          </ul>
+        </div>
+      </div>
+      <div class="note-box">
+        <strong style="color:var(--yellow)">✦ Nota metodológica:</strong> Los datos marcados con ✦ corresponden a estimaciones, proyecciones o datos parciales de 2025 basados en tendencias del DANE, Banco de la República y FMI a abril de 2025. Los datos sin ✦ son cifras oficiales confirmadas.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer>
+  <div class="wrap">
+    <div class="src-label">Fuentes oficiales utilizadas</div>
+    <div class="src"><span class="sbadge">DANE</span>Departamento Administrativo Nacional de Estadística · dane.gov.co · Cuentas Nacionales, IPC, Gran Encuesta Integrada de Hogares (GEIH)</div>
+    <div class="src"><span class="sbadge">Banrep</span>Banco de la República de Colombia · banrep.gov.co · Tasas de política monetaria, Informes de Inflación, Reportes de Estabilidad Financiera</div>
+    <div class="src"><span class="sbadge">MinHac.</span>Ministerio de Hacienda y Crédito Público · minhacienda.gov.co · Marco Fiscal de Mediano Plazo (MFMP)</div>
+    <div class="src"><span class="sbadge">FMI</span>Fondo Monetario Internacional · imf.org · World Economic Outlook, Consulta del Artículo IV para Colombia</div>
+    <div class="foot-bottom">
+      <span>Informe Macroeconómico · Colombia · 2024–2025 · Datos con fines educativos</span>
+      <div class="foot-flag">
+        <div class="flag" style="width:28px;height:19px"><div class="fy"></div><div class="fb"></div><div class="fr"></div></div>
+        <span>República de Colombia</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to top -->
+<button class="back-top" id="backTop" aria-label="Volver arriba">↑</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/charts.js"></script>
+</body>
+</html>
